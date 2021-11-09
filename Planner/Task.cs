@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Planner
 {
-    public partial class frmPlanner : Form
+    public partial class frmTask : Form
     {
-        public frmPlanner()
+        public frmTask()
         {
             InitializeComponent();
         }
 
         private void pbxClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
         }
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            new frmTask().Show();
+            this.Hide();
         }
     }
 }

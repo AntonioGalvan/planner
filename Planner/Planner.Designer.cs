@@ -120,6 +120,7 @@ namespace Planner
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAdd.TabIndex = 17;
             this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
             // pnlTask
             // 
