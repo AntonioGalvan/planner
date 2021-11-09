@@ -34,13 +34,17 @@ namespace Planner
             this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbxIcon = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlDecoration = new System.Windows.Forms.Panel();
+            this.pnlTasks = new System.Windows.Forms.Panel();
+            this.pbxAdd = new System.Windows.Forms.PictureBox();
+            this.pnlTask = new System.Windows.Forms.Panel();
+            this.lblTitleTask = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTasks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
+            this.pnlTask.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbxClose
@@ -88,40 +92,64 @@ namespace Planner
             this.pbxIcon.TabIndex = 14;
             this.pbxIcon.TabStop = false;
             // 
-            // panel1
+            // pnlDecoration
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.panel1.Location = new System.Drawing.Point(465, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 10);
-            this.panel1.TabIndex = 15;
+            this.pnlDecoration.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pnlDecoration.Location = new System.Drawing.Point(465, 59);
+            this.pnlDecoration.Name = "pnlDecoration";
+            this.pnlDecoration.Size = new System.Drawing.Size(775, 10);
+            this.pnlDecoration.TabIndex = 15;
             // 
-            // panel2
+            // pnlTasks
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Location = new System.Drawing.Point(15, 241);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1225, 474);
-            this.panel2.TabIndex = 16;
+            this.pnlTasks.AutoScroll = true;
+            this.pnlTasks.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTasks.Controls.Add(this.pnlTask);
+            this.pnlTasks.Location = new System.Drawing.Point(32, 241);
+            this.pnlTasks.Name = "pnlTasks";
+            this.pnlTasks.Size = new System.Drawing.Size(1208, 474);
+            this.pnlTasks.TabIndex = 16;
             // 
-            // pictureBox1
+            // pbxAdd
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 171);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.pbxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxAdd.Image = ((System.Drawing.Image)(resources.GetObject("pbxAdd.Image")));
+            this.pbxAdd.Location = new System.Drawing.Point(32, 171);
+            this.pbxAdd.Name = "pbxAdd";
+            this.pbxAdd.Size = new System.Drawing.Size(155, 46);
+            this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAdd.TabIndex = 17;
+            this.pbxAdd.TabStop = false;
+            // 
+            // pnlTask
+            // 
+            this.pnlTask.BackColor = System.Drawing.Color.CadetBlue;
+            this.pnlTask.Controls.Add(this.lblTitleTask);
+            this.pnlTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlTask.Location = new System.Drawing.Point(17, 19);
+            this.pnlTask.Name = "pnlTask";
+            this.pnlTask.Size = new System.Drawing.Size(235, 178);
+            this.pnlTask.TabIndex = 0;
+            // 
+            // lblTitleTask
+            // 
+            this.lblTitleTask.AutoSize = true;
+            this.lblTitleTask.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleTask.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitleTask.Location = new System.Drawing.Point(12, 12);
+            this.lblTitleTask.Name = "lblTitleTask";
+            this.lblTitleTask.Size = new System.Drawing.Size(175, 28);
+            this.lblTitleTask.TabIndex = 1;
+            this.lblTitleTask.Text = "Título de la tarea";
             // 
             // frmPlanner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1329, 776);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pbxAdd);
+            this.Controls.Add(this.pnlTasks);
+            this.Controls.Add(this.pnlDecoration);
             this.Controls.Add(this.pbxLogo);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbxIcon);
@@ -133,7 +161,10 @@ namespace Planner
             ((System.ComponentModel.ISupportInitialize)(this.pbxClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlTasks.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
+            this.pnlTask.ResumeLayout(false);
+            this.pnlTask.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,8 +176,10 @@ namespace Planner
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pbxIcon;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlDecoration;
+        private System.Windows.Forms.Panel pnlTasks;
+        private System.Windows.Forms.PictureBox pbxAdd;
+        private System.Windows.Forms.Panel pnlTask;
+        private System.Windows.Forms.Label lblTitleTask;
     }
 }
